@@ -546,11 +546,11 @@ int lgw_connect(bool spi_only, uint32_t tx_notch_freq) {
         }
 
         /* check SX1301 version */
-        // DEBUG_MSG("DEBUG: PARAMS TO RECIEVE VERSION FROM SPI:\n");
-        // DEBUG_PRINTF("DEBUG: lgw_spi_target: %u\n", lgw_spi_target);
-        // DEBUG_PRINTF("DEBUG: lgw_spi_mux_mode: %u\n", lgw_spi_mux_mode);
-        // DEBUG_PRINTF("DEBUG: LGW_SPI_MUX_TARGET_SX1301: %u\n", LGW_SPI_MUX_TARGET_SX1301);
-        // DEBUG_PRINTF("DEBUG: loregs[LGW_VERSION].addr: %u\n", loregs[LGW_VERSION].addr);
+        DEBUG_MSG("DEBUG: PARAMS TO RECIEVE VERSION FROM SPI:\n");
+        DEBUG_PRINTF("DEBUG: lgw_spi_target: %u\n", lgw_spi_target);
+        DEBUG_PRINTF("DEBUG: lgw_spi_mux_mode: %u\n", lgw_spi_mux_mode);
+        DEBUG_PRINTF("DEBUG: LGW_SPI_MUX_TARGET_SX1301: %u\n", LGW_SPI_MUX_TARGET_SX1301);
+        DEBUG_PRINTF("DEBUG: loregs[LGW_VERSION].addr: %u\n", loregs[LGW_VERSION].addr);
         spi_stat = lgw_spi_r(lgw_spi_target, lgw_spi_mux_mode, LGW_SPI_MUX_TARGET_SX1301, loregs[LGW_VERSION].addr, &u);
         if (spi_stat != LGW_SPI_SUCCESS) {
             DEBUG_MSG("ERROR READING CHIP VERSION REGISTER\n");
