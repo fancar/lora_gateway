@@ -607,6 +607,8 @@ int main(int argc, char **argv)
         }
     }
 
+    MSG("INFO: recieved exit signal: %u \n", exit_sig);
+    
     if (exit_sig == 1) {
         /* clean up before leaving */
         i = lgw_stop();
