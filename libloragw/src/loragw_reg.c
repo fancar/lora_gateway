@@ -547,7 +547,7 @@ int lgw_connect(bool spi_only, uint32_t tx_notch_freq) {
 
         /* check SX1301 version */
         DEBUG_MSG("DEBUG: PARAMS TO RECIEVE VERSION FROM SPI:\n");
-        DEBUG_PRINTF("DEBUG: lgw_spi_target: %u\n", lgw_spi_target);
+        // DEBUG_PRINTF("DEBUG: lgw_spi_target: %u\n", lgw_spi_target);
         DEBUG_PRINTF("DEBUG: lgw_spi_mux_mode: %u\n", lgw_spi_mux_mode);
         DEBUG_PRINTF("DEBUG: LGW_SPI_MUX_TARGET_SX1301: %u\n", LGW_SPI_MUX_TARGET_SX1301);
         DEBUG_PRINTF("DEBUG: loregs[LGW_VERSION].addr: %u\n", loregs[LGW_VERSION].addr);
